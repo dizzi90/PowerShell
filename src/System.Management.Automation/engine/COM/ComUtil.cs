@@ -60,7 +60,7 @@ namespace System.Management.Automation
                 ElementDescription = new COM.ELEMDESC();
                 ElementDescriptionArrayByteOffset = i * ElementDescriptionSize;
 
-                //Disable PRefast warning for converting to int32 and converting back into intptr.
+                //Disable PRefast warning for converting to int and converting back into intptr.
                 //Code below takes into account 32 bit vs 64 bit conversions
 #pragma warning disable 56515
                 if (IntPtr.Size == 4)
@@ -298,7 +298,7 @@ namespace System.Management.Automation
 
                 ElementDescription = new COM.ELEMDESC();
                 ElementDescriptionArrayByteOffset = i * ElementDescriptionSize;
-                //Disable PRefast warning for converting to int32 and converting back into intptr.
+                //Disable PRefast warning for converting to int and converting back into intptr.
                 //Code below takes into account 32 bit vs 64 bit conversions
 #pragma warning disable 56515
 

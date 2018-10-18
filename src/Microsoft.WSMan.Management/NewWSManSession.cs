@@ -145,7 +145,7 @@ namespace Microsoft.WSMan.Management
         [Parameter]
         [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "SPN")]
         [ValidateRange(0, Int32.MaxValue)]
-        public Int32 SPNPort
+        public int SPNPort
         {
             get { return spnport; }
             set
@@ -153,7 +153,7 @@ namespace Microsoft.WSMan.Management
                 spnport = value;
             }
         }
-        private Int32 spnport;
+        private int spnport;
 
         /// <summary>
         /// The following is the definition of the input parameter "Timeout".
@@ -162,7 +162,7 @@ namespace Microsoft.WSMan.Management
         [Parameter]
         [Alias("OperationTimeoutMSec")]
         [ValidateRange(0, Int32.MaxValue)]
-        public Int32 OperationTimeout
+        public int OperationTimeout
         {
             get { return operationtimeout; }
             set
@@ -170,7 +170,7 @@ namespace Microsoft.WSMan.Management
                 operationtimeout = value;
             }
         }
-        private Int32 operationtimeout;
+        private int operationtimeout;
 
         /// <summary>
         /// The following is the definition of the input parameter "UnEncrypted".

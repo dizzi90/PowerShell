@@ -470,14 +470,14 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
         /// <param name="strSize"></param>
         /// <param name="strColl"></param>
 
-        private void ReadPdhMultiString(ref IntPtr strNative, Int32 strSize, ref StringCollection strColl)
+        private void ReadPdhMultiString(ref IntPtr strNative, int strSize, ref StringCollection strColl)
         {
             Debug.Assert(strSize >= 2);
             int offset = 0;
             string allSubstringsWithNulls = string.Empty;
             while (offset <= ((strSize * sizeof(char)) - 4))
             {
-                Int32 next4 = Marshal.ReadInt32(strNative, offset);
+                int next4 = Marshal.ReadInt32(strNative, offset);
                 if (next4 == 0)
                 {
                     break;
@@ -509,7 +509,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return res;
             }
 
-            Int32 bufSize = pBufferSize.ToInt32();
+            int bufSize = pBufferSize.ToInt32();
             IntPtr bufCounterInfo = Marshal.AllocHGlobal(bufSize);
 
             try
@@ -654,7 +654,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return res;
             }
 
-            Int32 cChars = MachineListTcharSizePtr.ToInt32(); //should be ok on 64 bit
+            int cChars = MachineListTcharSizePtr.ToInt32(); //should be ok on 64 bit
             IntPtr strMachineList = Marshal.AllocHGlobal(cChars * sizeof(char));
 
             try
@@ -682,7 +682,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return res;
             }
 
-            Int32 cChars = pBufferSize.ToInt32();
+            int cChars = pBufferSize.ToInt32();
             IntPtr strObjectList = Marshal.AllocHGlobal(cChars * sizeof(char));
 
             try
@@ -726,7 +726,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return res;
             }
 
-            Int32 cChars = pCounterBufferSize.ToInt32();
+            int cChars = pCounterBufferSize.ToInt32();
             IntPtr strCountersList = (cChars > 0) ?
                 Marshal.AllocHGlobal((cChars) * sizeof(char)) : IntPtr.Zero;
             //re-set count to 0 if it is lte 2
@@ -835,7 +835,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return false;
             }
 
-            Int32 cChars = pPathBufferSize.ToInt32();
+            int cChars = pPathBufferSize.ToInt32();
             IntPtr strPath = Marshal.AllocHGlobal(cChars * sizeof(char));
 
             try
@@ -896,7 +896,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return res;
             }
 
-            Int32 cChars = pPathBufferSize.ToInt32();
+            int cChars = pPathBufferSize.ToInt32();
             IntPtr strPath = Marshal.AllocHGlobal(cChars * sizeof(char));
 
             try
@@ -1005,8 +1005,8 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
             string[] regCounters = (string[])rootKey.GetValue("Counter");
 
             // NOTE: 1-based enumeration because the name strings follow index strings in the array
-            Int32 counterIndex = -1;
-            Int32 objIndex = -1;
+            int counterIndex = -1;
+            int objIndex = -1;
             for (uint enumIndex = 1; enumIndex < regCounters.Length; enumIndex++)
             {
                 string regString = regCounters[enumIndex];
@@ -1685,7 +1685,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
                 return res;
             }
 
-            Int32 cChars = pcchPathListLength.ToInt32();
+            int cChars = pcchPathListLength.ToInt32();
             IntPtr strPathList = Marshal.AllocHGlobal(cChars * sizeof(char));
 
             try

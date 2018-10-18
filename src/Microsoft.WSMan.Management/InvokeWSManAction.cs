@@ -134,12 +134,12 @@ namespace Microsoft.WSMan.Management
         [Parameter(ParameterSetName = "ComputerName")]
         [ValidateNotNullOrEmpty]
         [ValidateRange(1, Int32.MaxValue)]
-        public Int32 Port
+        public int Port
         {
             get { return port; }
             set { port = value; }
         }
-        private Int32 port = 0;
+        private int port = 0;
 
         /// <summary>
         /// The following is the definition of the input parameter "SelectorSet".

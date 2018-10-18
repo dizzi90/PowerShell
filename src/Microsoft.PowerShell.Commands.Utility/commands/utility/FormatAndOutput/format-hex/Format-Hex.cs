@@ -185,7 +185,7 @@ namespace Microsoft.PowerShell.Commands
                 using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read)))
                 {
                     long  offset = Offset;
-                    Int32 bytesRead = 0;
+                    int bytesRead = 0;
                     long  count = 0;
 
                     reader.BaseStream.Position = Offset;
@@ -255,7 +255,7 @@ namespace Microsoft.PowerShell.Commands
                 case byte[] byteArray:
                     inputBytes = byteArray;
                     break;
-                case Int32 iInt32:
+                case int iInt32:
                     inputBytes = BitConverter.GetBytes(iInt32);
                     break;
                 case Int32[] i32s:

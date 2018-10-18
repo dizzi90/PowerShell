@@ -56,7 +56,7 @@ Describe "Using Namespace" -Tags "CI" {
         ("Int32" -as [Type]).FullName | Should -Be System.Int32
         # ("ElapsedEventHandler" -as [Type]).FullName | Should Be System.Timers.ElapsedEventHandler
 
-        New-Object Int32 | Should -Be 0
+        New-Object int | Should -Be 0
         New-Object CompilerGeneratedAttribute | Should -Be System.Runtime.CompilerServices.CompilerGeneratedAttribute
     }
 

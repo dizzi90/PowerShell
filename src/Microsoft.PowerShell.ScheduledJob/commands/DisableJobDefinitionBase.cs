@@ -47,12 +47,12 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// </summary>
         [Parameter(Position = 0, Mandatory = true,
                    ParameterSetName = DisableScheduledJobDefinitionBase.DefinitionIdParameterSet)]
-        public Int32 Id
+        public int Id
         {
             get { return _definitionId; }
             set { _definitionId = value; }
         }
-        private Int32 _definitionId;
+        private int _definitionId;
 
         /// <summary>
         /// ScheduledJobDefinition Name.

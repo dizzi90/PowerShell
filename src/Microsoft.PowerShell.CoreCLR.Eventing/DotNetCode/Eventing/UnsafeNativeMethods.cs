@@ -283,7 +283,7 @@ namespace System.Diagnostics.Eventing
             [FieldOffset(0)]
             public UInt32 UInteger;
             [FieldOffset(0)]
-            public Int32 Integer;
+            public int Integer;
             [FieldOffset(0)]
             public byte UInt8;
             [FieldOffset(0)]
@@ -813,7 +813,7 @@ namespace System.Diagnostics.Eventing
         [DllImport(WEVTAPI, CharSet = CharSet.Unicode, SetLastError = true)]
         [SecurityCritical]
         internal static extern EventLogHandle EvtCreateRenderContext(
-                            Int32 valuePathsCount,
+                            int valuePathsCount,
                             [MarshalAs(UnmanagedType.LPArray,ArraySubType = UnmanagedType.LPWStr)]
                                 String[] valuePaths,
                             [MarshalAs(UnmanagedType.I4)]EvtRenderContextFlags flags

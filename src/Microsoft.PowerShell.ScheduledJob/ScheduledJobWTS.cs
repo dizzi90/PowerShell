@@ -660,9 +660,9 @@ namespace Microsoft.PowerShell.ScheduledJob
             }
         }
 
-        private Int32 ConvertStringId(string triggerId)
+        private int ConvertStringId(string triggerId)
         {
-            Int32 triggerIdVal = 0;
+            int triggerIdVal = 0;
 
             try
             {

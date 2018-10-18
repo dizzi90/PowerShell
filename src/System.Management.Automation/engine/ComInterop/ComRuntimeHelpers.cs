@@ -407,7 +407,7 @@ namespace System.Management.Automation.ComInterop
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference")]
         public static IntPtr ConvertInt16ByrefToPtr(ref Int16 value) { return s_convertInt16ByrefToPtr(ref value); }
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference")]
-        public static IntPtr ConvertInt32ByrefToPtr(ref Int32 value) { return s_convertInt32ByrefToPtr(ref value); }
+        public static IntPtr ConvertInt32ByrefToPtr(ref int value) { return s_convertInt32ByrefToPtr(ref value); }
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference")]
         public static IntPtr ConvertInt64ByrefToPtr(ref long  value) { return s_convertInt64ByrefToPtr(ref value); }
         [SuppressMessage("Microsoft.Design", "CA1045:DoNotPassTypesByReference")]

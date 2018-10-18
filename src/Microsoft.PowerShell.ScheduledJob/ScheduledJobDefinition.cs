@@ -34,7 +34,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         private int _executionHistoryLength = DefaultExecutionHistoryLength;
         private bool _enabled = true;
         private Dictionary<Int32, ScheduledJobTrigger> _triggers = new Dictionary<Int32, ScheduledJobTrigger>();
-        private Int32 _currentTriggerId;
+        private int _currentTriggerId;
 
         private string _definitionFilePath;
         private string _definitionOutputPath;
@@ -1472,7 +1472,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <param name="triggerId">Trigger Id</param>
         /// <returns>ScheduledJobTrigger object</returns>
         public ScheduledJobTrigger GetTrigger(
-            Int32 triggerId)
+            int triggerId)
         {
             IsDisposed();
 

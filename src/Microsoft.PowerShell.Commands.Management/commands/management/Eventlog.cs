@@ -729,7 +729,7 @@ namespace Microsoft.PowerShell.Commands
         [Alias("ID", "EID")]
         [ValidateNotNullOrEmpty]
         [ValidateRange(0, UInt16.MaxValue)]
-        public Int32 EventId { get; set; }
+        public int EventId { get; set; }
 
         /// <summary>
         /// The message goes here.
@@ -863,7 +863,7 @@ namespace Microsoft.PowerShell.Commands
         [Alias("MRD")]
         [ValidateNotNullOrEmpty]
         [ValidateRange(1, 365)]
-        public Int32 RetentionDays
+        public int RetentionDays
         {
             get { return _retention; }
             set
@@ -872,7 +872,7 @@ namespace Microsoft.PowerShell.Commands
                 _retentionSpecified = true;
             }
         }
-        private Int32 _retention;
+        private int _retention;
         private bool _retentionSpecified = false;
         /// <summary>
         /// Overflow action to be taken.

@@ -26,13 +26,13 @@ namespace Microsoft.PowerShell.ScheduledJob
         private DateTime? _time;
         private List<DayOfWeek> _daysOfWeek;
         private TimeSpan _randomDelay;
-        private Int32 _interval = 1;
+        private int _interval = 1;
         private string _user;
         private TriggerFrequency _frequency = TriggerFrequency.None;
         private TimeSpan? _repInterval;
         private TimeSpan? _repDuration;
 
-        private Int32 _id;
+        private int _id;
         private bool _enabled = true;
         private ScheduledJobDefinition _jobDefAssociation;
 
@@ -63,7 +63,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <summary>
         /// Trigger days or weeks interval.
         /// </summary>
-        public Int32 Interval
+        public int Interval
         {
             get { return _interval; }
             set { _interval = value; }
@@ -127,7 +127,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <summary>
         /// Returns the trigger local Id.
         /// </summary>
-        public Int32 Id
+        public int Id
         {
             get { return _id; }
             internal set { _id = value; }
@@ -179,12 +179,12 @@ namespace Microsoft.PowerShell.ScheduledJob
             TriggerFrequency frequency,
             DateTime? time,
             List<DayOfWeek> daysOfWeek,
-            Int32 interval,
+            int interval,
             TimeSpan randomDelay,
             TimeSpan? repetitionInterval,
             TimeSpan? repetitionDuration,
             string user,
-            Int32 id)
+            int id)
         {
             _enabled = enabled;
             _frequency = frequency;
@@ -468,7 +468,7 @@ namespace Microsoft.PowerShell.ScheduledJob
             TimeSpan delay,
             TimeSpan? repetitionInterval,
             TimeSpan? repetitionDuration,
-            Int32 id,
+            int id,
             bool enabled)
         {
             return new ScheduledJobTrigger(
@@ -495,9 +495,9 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <returns>ScheduledJobTrigger</returns>
         public static ScheduledJobTrigger CreateDailyTrigger(
             DateTime time,
-            Int32 interval,
+            int interval,
             TimeSpan delay,
-            Int32 id,
+            int id,
             bool enabled)
         {
             return new ScheduledJobTrigger(
@@ -525,10 +525,10 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <returns>ScheduledJobTrigger</returns>
         public static ScheduledJobTrigger CreateWeeklyTrigger(
             DateTime time,
-            Int32 interval,
+            int interval,
             IEnumerable<DayOfWeek> daysOfWeek,
             TimeSpan delay,
-            Int32 id,
+            int id,
             bool enabled)
         {
             List<DayOfWeek> lDaysOfWeek = (daysOfWeek != null) ? new List<DayOfWeek>(daysOfWeek) : null;
@@ -557,7 +557,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         public static ScheduledJobTrigger CreateAtLogOnTrigger(
             string user,
             TimeSpan delay,
-            Int32 id,
+            int id,
             bool enabled)
         {
             return new ScheduledJobTrigger(
@@ -582,7 +582,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <returns>ScheduledJobTrigger</returns>
         public static ScheduledJobTrigger CreateAtStartupTrigger(
             TimeSpan delay,
-            Int32 id,
+            int id,
             bool enabled)
         {
             return new ScheduledJobTrigger(

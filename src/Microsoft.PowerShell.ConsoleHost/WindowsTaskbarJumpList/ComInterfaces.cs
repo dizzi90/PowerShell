@@ -222,13 +222,13 @@ namespace Microsoft.PowerShell
         internal interface IShellLinkDataListW
         {
             [PreserveSig]
-            Int32 AddDataBlock(IntPtr pDataBlock);
+            int AddDataBlock(IntPtr pDataBlock);
 
             [PreserveSig]
-            Int32 CopyDataBlock(UInt32 dwSig, out IntPtr ppDataBlock);
+            int CopyDataBlock(UInt32 dwSig, out IntPtr ppDataBlock);
 
             [PreserveSig]
-            Int32 RemoveDataBlock(UInt32 dwSig);
+            int RemoveDataBlock(UInt32 dwSig);
 
             void GetFlags(out uint pdwFlags);
             void SetFlags(uint dwFlags);

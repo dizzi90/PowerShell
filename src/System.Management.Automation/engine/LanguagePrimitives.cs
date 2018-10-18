@@ -709,7 +709,7 @@ namespace System.Management.Automation
             switch (value)
             {
                 case Int16 i16: return Math.Sign(i16) < 0 ? -i : i;
-                case Int32 i32: return Math.Sign(i32) < 0 ? -i : i;
+                case int i32: return Math.Sign(i32) < 0 ? -i : i;
                 case long  i64: return Math.Sign(i64) < 0 ? -i : i;
                 case sbyte sby: return Math.Sign(sby) < 0 ? -i : i;
                 case float f: return Math.Sign(f) < 0 ? -i : i;
@@ -1238,7 +1238,7 @@ namespace System.Management.Automation
             /* Byte     =  6 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* Int16    =  7 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* UInt16   =  8 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,
-            /* Int32    =  9 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
+            /* int    =  9 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* UInt32   = 10 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* long     = 11 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* UInt64   = 12 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,

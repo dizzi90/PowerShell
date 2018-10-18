@@ -373,7 +373,7 @@ namespace System.Management.Automation
                 [FieldOffset(0)]
                 internal Int16 _i2;
                 [FieldOffset(0)]
-                internal Int32 _i4;
+                internal int _i4;
                 [FieldOffset(0)]
                 internal long  _i8;
                 [FieldOffset(0)]
@@ -385,13 +385,13 @@ namespace System.Management.Automation
                 [FieldOffset(0)]
                 internal UInt64 _ui8;
                 [FieldOffset(0)]
-                internal Int32 _int;
+                internal int _int;
                 [FieldOffset(0)]
                 internal UInt32 _uint;
                 [FieldOffset(0)]
                 internal Int16 _bool;
                 [FieldOffset(0)]
-                internal Int32 _error;
+                internal int _error;
                 [FieldOffset(0)]
                 internal Single _r4;
                 [FieldOffset(0)]

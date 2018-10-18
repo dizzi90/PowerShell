@@ -437,7 +437,7 @@ namespace System.Management.Automation.SecurityAccountsManager.Native.NtSam
         [DllImport("samlib.dll")]
         internal static extern UInt32 SamCreateUser2InDomain(IntPtr domainHandle,
                                                              ref UNICODE_STRING accountName,
-                                                             Int32 accountType,
+                                                             int accountType,
                                                              UInt32 desiredAccess,
                                                              out IntPtr userHandle,
                                                              out UInt32 grantedAccess,

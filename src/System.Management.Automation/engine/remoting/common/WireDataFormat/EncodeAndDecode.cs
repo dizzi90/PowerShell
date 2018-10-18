@@ -1942,7 +1942,7 @@ namespace System.Management.Automation
         /// </summary>
         /// <param name="dataAsPSObject">data object to decode</param>
         /// <returns>minimum runspaces</returns>
-        internal static Int32 GetMinRunspaces(PSObject dataAsPSObject)
+        internal static int GetMinRunspaces(PSObject dataAsPSObject)
         {
             if (dataAsPSObject == null)
             {
@@ -1958,7 +1958,7 @@ namespace System.Management.Automation
         /// </summary>
         /// <param name="dataAsPSObject">data object to decode</param>
         /// <returns>maximum runspaces</returns>
-        internal static Int32 GetMaxRunspaces(PSObject dataAsPSObject)
+        internal static int GetMaxRunspaces(PSObject dataAsPSObject)
         {
             if (dataAsPSObject == null)
             {

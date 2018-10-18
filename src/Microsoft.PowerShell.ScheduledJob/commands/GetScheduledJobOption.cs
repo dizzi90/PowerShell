@@ -26,12 +26,12 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// </summary>
         [Parameter(Position = 0, Mandatory = true,
                    ParameterSetName = GetScheduledJobOptionCommand.JobDefinitionIdParameterSet)]
-        public Int32 Id
+        public int Id
         {
             get { return _id; }
             set { _id = value; }
         }
-        private Int32 _id;
+        private int _id;
 
         /// <summary>
         /// ScheduledJobDefinition Name.

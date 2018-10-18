@@ -57,7 +57,7 @@ Describe "Add-Member DRT Unit Tests" -Tags "CI" {
 
     It "Successful alias, no type" {
         $results = Add-Member -InputObject a -MemberType AliasProperty -Name Cnt -Value Length -passthru
-        $results.Cnt | Should -BeOfType Int32
+        $results.Cnt | Should -BeOfType int
         $results.Cnt | Should -Be 1
     }
 

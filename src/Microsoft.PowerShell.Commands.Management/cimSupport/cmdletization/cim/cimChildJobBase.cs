@@ -754,7 +754,7 @@ namespace Microsoft.PowerShell.Cmdletization.Cim
                 statusDescription = this.StatusMessage;
             }
 
-            Int32 signedSecondsRemaining;
+            int signedSecondsRemaining;
             if (secondsRemaining == UInt32.MaxValue)
             {
                 signedSecondsRemaining = -1;
@@ -768,7 +768,7 @@ namespace Microsoft.PowerShell.Cmdletization.Cim
                 signedSecondsRemaining = Int32.MaxValue;
             }
 
-            Int32 signedPercentageComplete;
+            int signedPercentageComplete;
             if (percentageCompleted == UInt32.MaxValue)
             {
                 signedPercentageComplete = -1;

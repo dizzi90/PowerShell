@@ -1094,7 +1094,7 @@ namespace Microsoft.PowerShell.Commands
         /// The credential to use
         /// </summary>
         [Parameter]
-        public Int32 ThrottleLimit { get; set; } = s_DEFAULT_THROTTLE_LIMIT;
+        public int ThrottleLimit { get; set; } = s_DEFAULT_THROTTLE_LIMIT;
 
         /// <summary>
         /// The ComputerName in which to query

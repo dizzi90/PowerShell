@@ -83,7 +83,7 @@ namespace System.Management.Automation.ComInterop
             [FieldOffset(0)]
             internal Int16 _i2;
             [FieldOffset(0)]
-            internal Int32 _i4;
+            internal int _i4;
             [FieldOffset(0)]
             internal long  _i8;
             [FieldOffset(0)]
@@ -102,7 +102,7 @@ namespace System.Management.Automation.ComInterop
             [FieldOffset(0)]
             internal Int16 _bool;
             [FieldOffset(0)]
-            internal Int32 _error;
+            internal int _error;
             [FieldOffset(0)]
             internal Single _r4;
             [FieldOffset(0)]
@@ -379,7 +379,7 @@ namespace System.Management.Automation.ComInterop
         }
 
         // VT_I4
-        public Int32 AsI4
+        public int AsI4
         {
             get
             {
@@ -394,7 +394,7 @@ namespace System.Management.Automation.ComInterop
             }
         }
 
-        public void SetAsByrefI4(ref Int32 value)
+        public void SetAsByrefI4(ref int value)
         {
             Debug.Assert(IsEmpty); // The setter can only be called once as VariantClear might be needed otherwise
             VariantType = (VarEnum.VT_I4 | VarEnum.VT_BYREF);
@@ -586,7 +586,7 @@ namespace System.Management.Automation.ComInterop
         }
 
         // VT_ERROR
-        public Int32 AsError
+        public int AsError
         {
             get
             {
@@ -601,7 +601,7 @@ namespace System.Management.Automation.ComInterop
             }
         }
 
-        public void SetAsByrefError(ref Int32 value)
+        public void SetAsByrefError(ref int value)
         {
             Debug.Assert(IsEmpty); // The setter can only be called once as VariantClear might be needed otherwise
             VariantType = (VarEnum.VT_ERROR | VarEnum.VT_BYREF);

@@ -70,7 +70,7 @@ Describe "FormatHex" -tags "CI" {
                 ExpectedResult = "00000000   05 00 00 00 06 00 00 00 07 00 00 00 08 00 00 00  ................"
             }
             @{
-                Name = "Can process int32 type 'fhx -InputObject [int32]2032'"
+                Name = "Can process int type 'fhx -InputObject [int32]2032'"
                 InputObject = [int32]2032
                 Count = 1
                 ExpectedResult = "00000000   F0 07 00 00                                      ð..."
@@ -142,7 +142,7 @@ Describe "FormatHex" -tags "CI" {
                 ExpectedSecondResult = "00000000000000000000   06 00 00 00                                      ...."
             }
             @{
-                Name = "Can process int32 type '[int32]2032 | fhx'"
+                Name = "Can process int type '[int32]2032 | fhx'"
                 InputObject = [int32]2032
                 Count = 1
                 ExpectedResult = "00000000000000000000   F0 07 00 00                                      ð..."

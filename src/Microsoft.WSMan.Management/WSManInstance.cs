@@ -205,7 +205,7 @@ namespace Microsoft.WSMan.Management
         /// </summary>
         [Parameter(ParameterSetName = "Enumerate")]
         [Parameter(ParameterSetName = "GetInstance")]
-        public Int32 Port
+        public int Port
         {
             get { return port; }
             set
@@ -213,7 +213,7 @@ namespace Microsoft.WSMan.Management
                 { port = value; }
             }
         }
-        private Int32 port = 0;
+        private int port = 0;
 
         /// <summary>
         /// The following is the definition of the input parameter "Associations".
@@ -723,12 +723,12 @@ namespace Microsoft.WSMan.Management
         [Parameter(ParameterSetName = "ComputerName")]
         [ValidateNotNullOrEmpty]
         [ValidateRange(1, Int32.MaxValue)]
-        public Int32 Port
+        public int Port
         {
             get { return port; }
             set { port = value; }
         }
-        private Int32 port = 0;
+        private int port = 0;
 
         /// <summary>
         /// The following is the definition of the input parameter "ResourceURI".
@@ -1027,12 +1027,12 @@ namespace Microsoft.WSMan.Management
         [Parameter(ParameterSetName = "ComputerName")]
         [ValidateNotNullOrEmpty]
         [ValidateRange(1, Int32.MaxValue)]
-        public Int32 Port
+        public int Port
         {
             get { return port; }
             set { port = value; }
         }
-        private Int32 port = 0;
+        private int port = 0;
 
         /// <summary>
         /// The following is the definition of the input parameter "ResourceURI".
@@ -1290,12 +1290,12 @@ namespace Microsoft.WSMan.Management
         [Parameter(ParameterSetName = "ComputerName")]
         [ValidateNotNullOrEmpty]
         [ValidateRange(1, Int32.MaxValue)]
-        public Int32 Port
+        public int Port
         {
             get { return port; }
             set { port = value; }
         }
-        private Int32 port = 0;
+        private int port = 0;
 
         /// <summary>
         /// The following is the definition of the input parameter "ResourceURI".

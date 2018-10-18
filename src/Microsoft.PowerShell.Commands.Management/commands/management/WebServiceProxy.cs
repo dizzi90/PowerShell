@@ -267,7 +267,7 @@ namespace Microsoft.PowerShell.Commands
             string givenuri = _uri.ToString();
             for (int i = 0; i < givenuri.Length; i++)
             {
-                Int32 val = System.Convert.ToInt32(givenuri[i], CultureInfo.InvariantCulture);
+                int val = System.Convert.ToInt32(givenuri[i], CultureInfo.InvariantCulture);
                 if ((val >= 65 && val <= 90) || (val >= 48 && val <= 57) || (val >= 97 && val <= 122))
                 {
                     rndname += givenuri[i];

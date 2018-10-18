@@ -49,7 +49,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <param name="writeErrorsAndWarnings">Errors/warnings are written to host</param>
         /// <returns>ScheduledJobDefinition object</returns>
         internal ScheduledJobDefinition GetJobDefinitionById(
-            Int32 id,
+            int id,
             bool writeErrorsAndWarnings = true)
         {
             Dictionary<string, Exception> errors = ScheduledJobDefinition.RefreshRepositoryFromStore(null);
@@ -296,7 +296,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// <param name="definitionName">ScheduledJobDefinition name</param>
         /// <param name="errorObject">Error object</param>
         internal void WriteTriggerNotFoundError(
-            Int32 notFoundId,
+            int notFoundId,
             string definitionName,
             object errorObject)
         {
@@ -311,7 +311,7 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// </summary>
         /// <param name="defId">Definition Id</param>
         internal void WriteDefinitionNotFoundByIdError(
-            Int32 defId)
+            int defId)
         {
             string msg = StringUtil.Format(ScheduledJobErrorStrings.DefinitionNotFoundById, defId);
             Exception reason = new RuntimeException(msg);

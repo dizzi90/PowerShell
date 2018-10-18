@@ -176,7 +176,7 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
         [FieldOffset(0)]
         public UInt32 LowPart;
         [FieldOffset(4)]
-        public Int32 HighPart;
+        public int HighPart;
     }
 #pragma warning restore 0649, 0169
     #endregion Structures
@@ -224,8 +224,8 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
         //
         // The operation completed successfully.
         //
-        internal const Int32 ERROR_SUCCESS              = 0;
-        internal const Int32 NO_ERROR                   = ERROR_SUCCESS;
+        internal const int ERROR_SUCCESS              = 0;
+        internal const int NO_ERROR                   = ERROR_SUCCESS;
 
         //
         // MessageId: ERROR_ACCESS_DENIED
@@ -268,14 +268,14 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
         //
         // The file name is too long.
         //
-        internal const Int32 ERROR_BUFFER_OVERFLOW      = 111;
+        internal const int ERROR_BUFFER_OVERFLOW      = 111;
 
         //
         // MessageText:
         //
         // The data area passed to a system call is too small.
         //
-        internal const Int32 ERROR_INSUFFICIENT_BUFFER  = 122;
+        internal const int ERROR_INSUFFICIENT_BUFFER  = 122;
 
         //
         // MessageId: ERROR_INVALID_LEVEL
@@ -293,7 +293,7 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
         //
         // Invalid flags.
         //
-        internal const Int32 ERROR_INVALID_FLAGS        = 1004;
+        internal const int ERROR_INVALID_FLAGS        = 1004;
 
         //
         // MessageId: ERROR_ILL_FORMED_PASSWORD
@@ -318,7 +318,7 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
         //
         // No mapping between account names and security IDs was done.
         //
-        internal const Int32 ERROR_NONE_MAPPED          = 1332;
+        internal const int ERROR_NONE_MAPPED          = 1332;
 
         internal const int NERR_Success                 = 0;
         // NERR_BASE is the base of error codes from network utilities,
@@ -350,9 +350,9 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
         internal static extern bool LookupAccountSid(string systemName,
                                                      byte[] accountSid,
                                                      StringBuilder accountName,
-                                                     ref Int32 nameLength,
+                                                     ref int nameLength,
                                                      StringBuilder domainName,
-                                                     ref Int32 domainNameLength,
+                                                     ref int domainNameLength,
                                                      out SID_NAME_USE use);
 
         [DllImport(PInvokeDllNames.LookupAccountNameDllName, CharSet = CharSet.Unicode, SetLastError = true)]

@@ -325,11 +325,11 @@ namespace Microsoft.PowerShell.Commands
 
             TraceRouteResult traceRouteResult = new TraceRouteResult(Source, targetAddress, resolvedTargetName);
 
-            Int32 currentHop = 1;
+            int currentHop = 1;
             Ping sender = new Ping();
             PingOptions pingOptions = new PingOptions(currentHop, DontFragment.IsPresent);
             PingReply reply = null;
-            Int32 timeout = TimeoutSeconds * 1000;
+            int timeout = TimeoutSeconds * 1000;
 
             do
             {
@@ -527,7 +527,7 @@ namespace Microsoft.PowerShell.Commands
             int HighMTUSize = 10000;
             int CurrentMTUSize = 1473;
             int LowMTUSize = targetAddress.AddressFamily == AddressFamily.InterNetworkV6 ? 1280 : 68;
-            Int32 timeout = TimeoutSeconds * 1000;
+            int timeout = TimeoutSeconds * 1000;
 
             try
             {
@@ -672,8 +672,8 @@ namespace Microsoft.PowerShell.Commands
             PingOptions pingOptions = new PingOptions(MaxHops, DontFragment.IsPresent);
             PingReply reply = null;
             PingReport pingReport = new PingReport(Source, resolvedTargetName);
-            Int32 timeout = TimeoutSeconds * 1000;
-            Int32 delay = Delay * 1000;
+            int timeout = TimeoutSeconds * 1000;
+            int delay = Delay * 1000;
 
             for (int i = 1; i <= Count; i++)
             {

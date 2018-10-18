@@ -34,23 +34,23 @@ namespace Microsoft.PowerShell.ScheduledJob
         /// Daily interval for trigger.
         /// </summary>
         [Parameter(ParameterSetName = NewJobTriggerCommand.DailyParameterSet)]
-        public Int32 DaysInterval
+        public int DaysInterval
         {
             get { return _daysInterval; }
             set { _daysInterval = value; }
         }
-        private Int32 _daysInterval = 1;
+        private int _daysInterval = 1;
 
         /// <summary>
         /// Weekly interval for trigger.
         /// </summary>
         [Parameter(ParameterSetName = NewJobTriggerCommand.WeeklyParameterSet)]
-        public Int32 WeeksInterval
+        public int WeeksInterval
         {
             get { return _weeksInterval; }
             set { _weeksInterval = value; }
         }
-        private Int32 _weeksInterval = 1;
+        private int _weeksInterval = 1;
 
         /// <summary>
         /// Random delay for trigger.

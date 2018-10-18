@@ -262,7 +262,7 @@ namespace Microsoft.PowerShell.Commands
         [Parameter]
         [Alias("OperationTimeoutMSec")]
         [ValidateRange(0, Int32.MaxValue)]
-        public Int32 OperationTimeout
+        public int OperationTimeout
         {
             get
             {

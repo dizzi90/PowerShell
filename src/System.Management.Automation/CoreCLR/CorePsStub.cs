@@ -374,7 +374,7 @@ namespace System.Management.Automation.ComInterop
         /// In general, there is a many-to-many mapping between Type and VarEnum. However, this method
         /// returns a simple mapping that is needed for the current implementation. The reason for the
         /// many-to-many relation is:
-        /// 1. Int32 maps to VT_I4 as well as VT_ERROR, and Decimal maps to VT_DECIMAL and VT_CY. However,
+        /// 1. int maps to VT_I4 as well as VT_ERROR, and Decimal maps to VT_DECIMAL and VT_CY. However,
         ///    this changes if you throw the wrapper types into the mix.
         /// 2. There is no Type to represent COM types. __ComObject is a private type, and Object is too
         ///    general.
