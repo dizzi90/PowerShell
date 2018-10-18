@@ -1464,7 +1464,7 @@ namespace Microsoft.PowerShell.Commands
         public UInt32? NumberOfProcessors;
         public string[] OEMStringArray;
         public bool? PartOfDomain;
-        public Int64? PauseAfterReset;
+        public long ? PauseAfterReset;
         public UInt16? PCSystemType;
         public UInt16? PCSystemTypeEx;
         public UInt16[] PowerManagementCapabilities;
@@ -2694,7 +2694,7 @@ namespace Microsoft.PowerShell.Commands
         /// and automatic system reset. A value of –1 (minus one) indicates that
         /// the pause value is unknown
         /// </summary>
-        public Int64? CsPauseAfterReset { get; internal set; }
+        public long ? CsPauseAfterReset { get; internal set; }
 
         /// <summary>
         /// Type of the computer in use, such as laptop, desktop, or tablet

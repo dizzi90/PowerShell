@@ -82,13 +82,13 @@ Describe "FormatHex" -tags "CI" {
                 ExpectedResult = "00000000000000000000   F0 07 00 00 F1 07 00 00 F2 07 00 00              ð...ñ...ò..."
             }
             @{
-                Name = "Can process Int64 type 'fhx -InputObject [Int64]9223372036854775807'"
+                Name = "Can process long  type 'fhx -InputObject [Int64]9223372036854775807'"
                 InputObject = [Int64]9223372036854775807
                 Count = 1
                 ExpectedResult = "00000000000000000000   FF FF FF FF FF FF FF 7F                          ......."
             }
             @{
-                Name = "Can process Int64[] type 'fhx -InputObject [Int64[]](9223372036852,9223372036853)'"
+                Name = "Can process long [] type 'fhx -InputObject [Int64[]](9223372036852,9223372036853)'"
                 InputObject = [Int64[]](9223372036852,9223372036853)
                 Count = 1
                 ExpectedResult = "00000000000000000000   F4 5A D0 7B 63 08 00 00 F5 5A D0 7B 63 08 00 00  ôZÐ{c...õZÐ{c..."
@@ -155,13 +155,13 @@ Describe "FormatHex" -tags "CI" {
                 ExpectedSecondResult = "00000000000000000000   F1 07 00 00                                      ñ..."
             }
             @{
-                Name = "Can process Int64 type '[Int64]9223372036854775807 | fhx'"
+                Name = "Can process long  type '[Int64]9223372036854775807 | fhx'"
                 InputObject = [Int64]9223372036854775807
                 Count = 1
                 ExpectedResult = "00000000000000000000   FF FF FF FF FF FF FF 7F                          ......."
             }
             @{
-                Name = "Can process Int64[] type '[Int64[]](9223372036852,9223372036853) | fhx'"
+                Name = "Can process long [] type '[Int64[]](9223372036852,9223372036853) | fhx'"
                 InputObject = [Int64[]](9223372036852,9223372036853)
                 Count = 2
                 ExpectedResult = "00000000000000000000   F4 5A D0 7B 63 08 00 00                          ôZÐ{c..."

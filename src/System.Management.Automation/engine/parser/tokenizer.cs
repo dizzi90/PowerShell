@@ -484,7 +484,7 @@ namespace System.Management.Automation.Language
     internal enum NumberSuffixFlags
     {
         /// <summary>
-        /// Indicates no suffix, a raw numeric literal. May be parsed as Int32, Int64, or Double.
+        /// Indicates no suffix, a raw numeric literal. May be parsed as Int32, long , or Double.
         /// </summary>
         None = 0x0,
 

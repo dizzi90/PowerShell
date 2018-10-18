@@ -197,7 +197,7 @@ namespace System.Management.Automation.Host
         /// Invoked by <see cref="System.Management.Automation.Cmdlet.WriteProgress(Int64, System.Management.Automation.ProgressRecord)"/> to display a progress record.
         /// </summary>
         /// <param name="sourceId">
-        /// Unique identifier of the source of the record.  An int64 is used because typically, the 'this' pointer of
+        /// Unique identifier of the source of the record.  An long  is used because typically, the 'this' pointer of
         /// the command from whence the record is originating is used, and that may be from a remote Runspace on a 64-bit
         /// machine.
         /// </param>

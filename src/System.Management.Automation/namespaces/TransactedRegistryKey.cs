@@ -1547,7 +1547,7 @@ namespace Microsoft.PowerShell.Commands.Internal
         private RegistryValueKind CalculateValueKind(Object value)
         {
             // This logic matches what used to be in SetValue(string name, object value) in the v1.0 and v1.1 days.
-            // Even though we could add detection for an int64 in here, we want to maintain compatibility with the
+            // Even though we could add detection for an long  in here, we want to maintain compatibility with the
             // old behavior.
             if (value is Int32)
                 return RegistryValueKind.DWord;

@@ -60,7 +60,7 @@ namespace System.Management.Automation.Internal
                 // MeasuresKeyword is to indicate that event is for understanding measures and reporting scenarios.
                 // This keyword results in the generation of Asimov compatible events for telemetry
                 // Refer ~\minkernel\published\internal\telemetry\MicrosoftTelemetry.h
-                const Int64 measuresKeyword = 0x0000400000000000;
+                const long  measuresKeyword = 0x0000400000000000;
 
                 // Create Instance of EventSourceOptions struct
                 Type eventSourceOptionsType = diagnosticsTracingAssembly.GetType("System.Diagnostics.Tracing.EventSourceOptions");

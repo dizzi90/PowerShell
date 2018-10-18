@@ -710,7 +710,7 @@ namespace System.Management.Automation
             {
                 case Int16 i16: return Math.Sign(i16) < 0 ? -i : i;
                 case Int32 i32: return Math.Sign(i32) < 0 ? -i : i;
-                case Int64 i64: return Math.Sign(i64) < 0 ? -i : i;
+                case long  i64: return Math.Sign(i64) < 0 ? -i : i;
                 case sbyte sby: return Math.Sign(sby) < 0 ? -i : i;
                 case float f: return Math.Sign(f) < 0 ? -i : i;
                 case double d: return Math.Sign(d) < 0 ? -i : i;
@@ -1240,7 +1240,7 @@ namespace System.Management.Automation
             /* UInt16   =  8 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* Int32    =  9 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* UInt32   = 10 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,
-            /* Int64    = 11 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
+            /* long     = 11 */ TypeCodeTraits.SignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* UInt64   = 12 */ TypeCodeTraits.UnsignedInteger | TypeCodeTraits.CimIntrinsicType,
             /* Single   = 13 */ TypeCodeTraits.Floating | TypeCodeTraits.CimIntrinsicType,
             /* Double   = 14 */ TypeCodeTraits.Floating | TypeCodeTraits.CimIntrinsicType,
@@ -1424,7 +1424,7 @@ namespace System.Management.Automation
             }
             else if (type == typeof(Int64))
             {
-                return new Int64Converter();
+                return new long Converter();
             }
             else if (type == typeof(UInt16))
             {
@@ -1926,7 +1926,7 @@ namespace System.Management.Automation
                     {
                         foreach (object value in values)
                         {
-                            Int64 valueInt64 = Convert.ToInt64(value, CultureInfo.CurrentCulture);
+                            long  valueInt64 = Convert.ToInt64(value, CultureInfo.CurrentCulture);
                             // A negative value cannot be flag
                             if (valueInt64 < 0)
                             {
@@ -1994,7 +1994,7 @@ namespace System.Management.Automation
                     // Type.GetTypeCode will return the integer type code for enumValue.GetType()
                     if (LanguagePrimitives.IsSignedInteger(enumValue.GetType().GetTypeCode()))
                     {
-                        Int64 enumValueInt64 = Convert.ToInt64(enumValue, CultureInfo.CurrentCulture);
+                        long  enumValueInt64 = Convert.ToInt64(enumValue, CultureInfo.CurrentCulture);
 
                         // A negative value cannot be flag, so we return false
                         if (enumValueInt64 < 0)
@@ -2004,7 +2004,7 @@ namespace System.Management.Automation
                         }
                     }
 
-                    // the if above, guarantees that even if it is an Int64 it is > 0
+                    // the if above, guarantees that even if it is an long  it is > 0
                     // so the conversion should always work.
                     UInt64 enumValueUInt64 = Convert.ToUInt64(enumValue, CultureInfo.CurrentCulture);
 

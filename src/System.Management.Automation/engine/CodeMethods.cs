@@ -47,7 +47,7 @@ namespace Microsoft.PowerShell
     /// Contains CodeMethod implementations for some adapted types like:
     ///
     /// 1. DirectoryEntry Related Code Methods
-    ///    (a) Convert from DE LargeInteger to Int64.
+    ///    (a) Convert from DE LargeInteger to long .
     ///    (b) Convert from DE Dn-With-Binary to string.
     /// </summary>
     public static class AdapterCodeMethods
@@ -55,13 +55,13 @@ namespace Microsoft.PowerShell
         #region DirectoryEntry related CodeMethods
 
         /// <summary>
-        /// Converts instance of LargeInteger to .net Int64.
+        /// Converts instance of LargeInteger to .net long .
         /// </summary>
         /// <param name="deInstance">Instance of PSObject wrapping DirectoryEntry object</param>
         /// <param name="largeIntegerInstance">Instance of PSObject wrapping LargeInteger instance</param>
-        /// <returns>Converted Int64.</returns>
+        /// <returns>Converted long .</returns>
         [SuppressMessage("Microsoft.Naming", "CA1720:IdentifiersShouldNotContainTypeNames", MessageId = "integer")]
-        public static Int64 ConvertLargeIntegerToInt64(PSObject deInstance, PSObject largeIntegerInstance)
+        public static long  ConvertLargeIntegerToInt64(PSObject deInstance, PSObject largeIntegerInstance)
         {
             if (largeIntegerInstance == null)
             {

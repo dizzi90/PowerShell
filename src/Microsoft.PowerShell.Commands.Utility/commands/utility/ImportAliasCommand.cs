@@ -292,7 +292,7 @@ namespace Microsoft.PowerShell.Commands
             {
                 CSVHelper csvHelper = new CSVHelper(',');
 
-                Int64 lineNumber = 0;
+                long  lineNumber = 0;
                 string line = null;
                 while ((line = reader.ReadLine()) != null)
                 {

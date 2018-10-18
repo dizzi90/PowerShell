@@ -61,7 +61,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         [Parameter]
         [Alias("TimeoutMSec")]
-        public Int64 Timeout
+        public long  Timeout
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Microsoft.PowerShell.Commands
             }
         }
 
-        private Int64 _timeOut = 0;
+        private long  _timeOut = 0;
         private bool _timeoutSpecified = false;
 
         #endregion parameters

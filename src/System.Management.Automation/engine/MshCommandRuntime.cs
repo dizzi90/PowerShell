@@ -287,8 +287,8 @@ namespace System.Management.Automation
 
         // Variables needed to generate a unique SourceId for
         // WriteProgress(ProgressRecord).
-        private static Int64 s_lastUsedSourceId /* = 0 */;
-        private Int64 _sourceId /* = 0 */;
+        private static long  s_lastUsedSourceId /* = 0 */;
+        private long  _sourceId /* = 0 */;
 
         /// <summary>
         /// Display progress information
@@ -376,14 +376,14 @@ namespace System.Management.Automation
         /// <see cref="System.Management.Automation.ActionPreferenceStopException"/>,
         /// </remarks>
         public void WriteProgress(
-            Int64 sourceId,
+            long  sourceId,
             ProgressRecord progressRecord)
         {
             WriteProgress(sourceId, progressRecord, false);
         } //WriteProgress
 
         internal void WriteProgress(
-                Int64 sourceId,
+                long  sourceId,
                 ProgressRecord progressRecord,
                 bool overrideInquire)
         {

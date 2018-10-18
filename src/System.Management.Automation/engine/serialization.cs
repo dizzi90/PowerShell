@@ -6180,7 +6180,7 @@ namespace System.Management.Automation
         /// </summary>
         /// <param name="key">The key of the element to add</param>
         /// <param name="value">The value of the element to add</param>
-        public void Add(string key, Int64 value)
+        public void Add(string key, long  value)
         {
             this.Add((object)key, (object)value);
         }
@@ -6190,7 +6190,7 @@ namespace System.Management.Automation
         /// </summary>
         /// <param name="key">The key of the element to add</param>
         /// <param name="value">The value of the element to add</param>
-        public void Add(string key, Int64[] value)
+        public void Add(string key, long [] value)
         {
             this.Add((object)key, (object)value);
         }

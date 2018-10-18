@@ -58,9 +58,9 @@ Describe "Json Tests" -Tags "Feature" {
             $valueFromNotCompressedResult.FirstName | Should -Match $valueFromCompressedResult.FirstName
         }
 
-        It "Convertto-Json should handle Enum based on Int64" {
+        It "Convertto-Json should handle Enum based on long " {
 
-            # Test follow-up for bug Win8: 378368 Convertto-Json problems with Enum based on Int64.
+            # Test follow-up for bug Win8: 378368 Convertto-Json problems with Enum based on long .
             if ( $null -eq ("JsonEnumTest" -as "Type")) {
                 $enum1 = "TestEnum" + (get-random)
                 $enum2 = "TestEnum" + (get-random)

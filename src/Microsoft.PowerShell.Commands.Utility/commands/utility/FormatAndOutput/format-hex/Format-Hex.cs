@@ -60,14 +60,14 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         [Parameter()]
         [ValidateRange(ValidateRangeKind.Positive)]
-        public Int64 Count { get; set; } = Int64.MaxValue;
+        public long  Count { get; set; } = long .MaxValue;
 
         /// <summary>
         /// Gets and sets offset of bytes to start reading the input stream from.
         /// </summary>
         [Parameter()]
         [ValidateRange(ValidateRangeKind.NonNegative)]
-        public Int64 Offset { get; set; }
+        public long  Offset { get; set; }
 
         /// <summary>
         /// This parameter is no-op.
@@ -184,9 +184,9 @@ namespace Microsoft.PowerShell.Commands
             {
                 using (BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read)))
                 {
-                    Int64 offset = Offset;
+                    long  offset = Offset;
                     Int32 bytesRead = 0;
-                    Int64 count = 0;
+                    long  count = 0;
 
                     reader.BaseStream.Position = Offset;
 
@@ -270,10 +270,10 @@ namespace Microsoft.PowerShell.Commands
                     }
 
                     break;
-                case Int64 iInt64:
+                case long  iInt64:
                     inputBytes = BitConverter.GetBytes(iInt64);
                     break;
-                case Int64[] inputInt64s:
+                case long [] inputInt64s:
                     int i64 = 0;
                     inputBytes = new byte[sizeof(Int64) * inputInt64s.Length];
                     Span<byte> inputStreamArray64 = inputBytes;
@@ -324,13 +324,13 @@ namespace Microsoft.PowerShell.Commands
         /// <param name="inputBytes">Bytes for the hexadecimial representaion.</param>
         /// <param name="path">File path.</param>
         /// <param name="offset">Offset in the file.</param>
-        private void WriteHexidecimal(Span<byte> inputBytes, string path, Int64 offset)
+        private void WriteHexidecimal(Span<byte> inputBytes, string path, long  offset)
         {
             ByteCollection byteCollectionObject = new ByteCollection((UInt64)offset, inputBytes.ToArray(), path);
             WriteObject(byteCollectionObject);
         }
 
-        private void WriteHexidecimal(byte[] inputBytes, string path, Int64 offset)
+        private void WriteHexidecimal(byte[] inputBytes, string path, long  offset)
         {
             ByteCollection byteCollectionObject = new ByteCollection((UInt64)offset, inputBytes, path);
             WriteObject(byteCollectionObject);

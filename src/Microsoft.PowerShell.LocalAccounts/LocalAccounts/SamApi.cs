@@ -197,7 +197,7 @@ namespace System.Management.Automation.SecurityAccountsManager.Native.NtSam
     internal struct USER_EXPIRES_INFORMATION
     {
         //LARGE_INTEGER AccountExpires;
-        public Int64 AccountExpires;
+        public long  AccountExpires;
     }
 
     [StructLayout(LayoutKind.Sequential)]

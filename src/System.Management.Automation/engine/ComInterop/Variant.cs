@@ -85,7 +85,7 @@ namespace System.Management.Automation.ComInterop
             [FieldOffset(0)]
             internal Int32 _i4;
             [FieldOffset(0)]
-            internal Int64 _i8;
+            internal long  _i8;
             [FieldOffset(0)]
             internal Byte _ui1;
             [FieldOffset(0)]
@@ -108,7 +108,7 @@ namespace System.Management.Automation.ComInterop
             [FieldOffset(0)]
             internal Double _r8;
             [FieldOffset(0)]
-            internal Int64 _cy;
+            internal long  _cy;
             [FieldOffset(0)]
             internal Double _date;
             [SuppressMessage("Microsoft.Reliability", "CA2006:UseSafeHandleToEncapsulateNativeResources")]
@@ -402,7 +402,7 @@ namespace System.Management.Automation.ComInterop
         }
 
         // VT_I8
-        public Int64 AsI8
+        public long  AsI8
         {
             get
             {
@@ -417,7 +417,7 @@ namespace System.Management.Automation.ComInterop
             }
         }
 
-        public void SetAsByrefI8(ref Int64 value)
+        public void SetAsByrefI8(ref long  value)
         {
             Debug.Assert(IsEmpty); // The setter can only be called once as VariantClear might be needed otherwise
             VariantType = (VarEnum.VT_I8 | VarEnum.VT_BYREF);
@@ -698,7 +698,7 @@ namespace System.Management.Automation.ComInterop
             }
         }
 
-        public void SetAsByrefCy(ref Int64 value)
+        public void SetAsByrefCy(ref long  value)
         {
             Debug.Assert(IsEmpty); // The setter can only be called once as VariantClear might be needed otherwise
             VariantType = (VarEnum.VT_CY | VarEnum.VT_BYREF);

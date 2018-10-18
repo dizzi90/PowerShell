@@ -1210,8 +1210,8 @@ namespace System.Diagnostics.Eventing.Reader
                     Marshal.Copy(val.Reference, arInt32, 0, (int)val.Count);
                     return arInt32;
                 case ((int)UnsafeNativeMethods.EvtMasks.EVT_VARIANT_TYPE_ARRAY | (int)UnsafeNativeMethods.EvtVariantType.EvtVarTypeInt64):
-                    if (val.Reference == IntPtr.Zero) return new Int64[0];
-                    Int64[] arInt64 = new Int64[val.Count];
+                    if (val.Reference == IntPtr.Zero) return new long [0];
+                    long [] arInt64 = new long [val.Count];
                     Marshal.Copy(val.Reference, arInt64, 0, (int)val.Count);
                     return arInt64;
                 case ((int)UnsafeNativeMethods.EvtMasks.EVT_VARIANT_TYPE_ARRAY | (int)UnsafeNativeMethods.EvtVariantType.EvtVarTypeSingle):

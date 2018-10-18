@@ -346,7 +346,7 @@ namespace System.Management.Automation
             // Construct a DateTime with with the precision to Second as same as the passed DateTime and so get
             // the ticks difference so that the microseconds can be calculated
             DateTime dtTemp = new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second, 0);
-            Int64 microsec = ((date.Ticks - dtTemp.Ticks) * 1000) / TimeSpan.TicksPerMillisecond;
+            long  microsec = ((date.Ticks - dtTemp.Ticks) * 1000) / TimeSpan.TicksPerMillisecond;
 
             // fill the microseconds field
             String strMicrosec = microsec.ToString((IFormatProvider)CultureInfo.InvariantCulture.GetFormat(typeof(Int64)));

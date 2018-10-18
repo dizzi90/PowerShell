@@ -4057,7 +4057,7 @@ namespace Microsoft.PowerShell.Commands
                                     try
                                     {
                                         // WinRM returns both signed and unsigned 32 bit string values.  Convert to signed 32 bit integer.
-                                        Int64 eCode = Convert.ToInt64(errorCodeString, System.Globalization.NumberFormatInfo.InvariantInfo);
+                                        long  eCode = Convert.ToInt64(errorCodeString, System.Globalization.NumberFormatInfo.InvariantInfo);
                                         unchecked
                                         {
                                             errorCode = (int)eCode;

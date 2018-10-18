@@ -100,7 +100,7 @@ namespace Microsoft.PowerShell.Commands
                 }
                 catch (OverflowException)
                 {
-                    // It must be a negative Int64, and therefore need no more conversion
+                    // It must be a negative long , and therefore need no more conversion
                 }
             }
 

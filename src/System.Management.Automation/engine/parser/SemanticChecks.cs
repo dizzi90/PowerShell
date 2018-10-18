@@ -1815,7 +1815,7 @@ namespace System.Management.Automation.Language
 
             // Only allow simple types of arrays of simple types as defined by System.Typecode
             // The permitted types are: Empty, Object, DBNull, Boolean, Char, SByte, Byte,
-            // Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Decimal, DateTime, String
+            // Int16, UInt16, Int32, UInt32, long , UInt64, Single, Double, Decimal, DateTime, String
             // We reject anything with a typecode or element typecode of object...
             // If we couldn't resolve the type, then it's definitely an error.
             if (type == null || ((type.IsArray ? type.GetElementType() : type).GetTypeCode() == TypeCode.Object))

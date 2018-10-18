@@ -898,7 +898,7 @@ namespace Microsoft.PowerShell.Commands
         /// </summary>
         [Parameter]
         [ValidateNotNullOrEmpty]
-        public Int64 MaximumSize
+        public long  MaximumSize
         {
             get { return _maximumKilobytes; }
             set
@@ -907,7 +907,7 @@ namespace Microsoft.PowerShell.Commands
                 _maxkbSpecified = true;
             }
         }
-        private Int64 _maximumKilobytes;
+        private long  _maximumKilobytes;
         private bool _maxkbSpecified = false;
         #endregion Parameters
 

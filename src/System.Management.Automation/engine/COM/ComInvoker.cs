@@ -375,7 +375,7 @@ namespace System.Management.Automation
                 [FieldOffset(0)]
                 internal Int32 _i4;
                 [FieldOffset(0)]
-                internal Int64 _i8;
+                internal long  _i8;
                 [FieldOffset(0)]
                 internal Byte _ui1;
                 [FieldOffset(0)]
@@ -397,7 +397,7 @@ namespace System.Management.Automation
                 [FieldOffset(0)]
                 internal Double _r8;
                 [FieldOffset(0)]
-                internal Int64 _cy;
+                internal long  _cy;
                 [FieldOffset(0)]
                 internal double _date;
                 [FieldOffset(0)]

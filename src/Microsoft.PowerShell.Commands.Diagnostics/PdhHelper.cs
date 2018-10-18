@@ -226,7 +226,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
         {
             public uint CStatus;
 
-            public Int64 largeValue;
+            public long  largeValue;
 
             //[FieldOffset (4), MarshalAs(UnmanagedType.LPStr)]
             //public string AnsiStringValue;
@@ -257,16 +257,16 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
         {
             public uint CStatus;
             public System.Runtime.InteropServices.ComTypes.FILETIME TimeStamp;
-            public Int64 FirstValue;
-            public Int64 SecondValue;
+            public long  FirstValue;
+            public long  SecondValue;
             public uint MultiCount;
         }
 
         [StructLayout(LayoutKind.Sequential)]
         private struct PDH_TIME_INFO
         {
-            public Int64 StartTime;
-            public Int64 EndTime;
+            public long  StartTime;
+            public long  EndTime;
             public UInt32 SampleCount;
         }
 
@@ -316,7 +316,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
 
         //not on XP
         [DllImport("pdh.dll")]
-        private static extern uint PdhCollectQueryDataWithTime(PdhSafeQueryHandle queryHandle, ref Int64 pllTimeStamp);
+        private static extern uint PdhCollectQueryDataWithTime(PdhSafeQueryHandle queryHandle, ref long  pllTimeStamp);
 
         [DllImport("pdh.dll")]
         private static extern uint PdhCollectQueryData(PdhSafeQueryHandle queryHandle);
@@ -351,7 +351,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
         //Win7+ only
         [DllImport("pdh.dll")]
         private static extern uint PdhWriteRelogSample(PdhSafeLogHandle LogHandle,
-                                                        Int64 Timestamp
+                                                        long  Timestamp
                                                         );
 
         [DllImport("pdh.dll", CharSet = CharSet.Unicode)]
@@ -638,7 +638,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
             {
                 endTime = new DateTime(endTime.Ticks, DateTimeKind.Utc);
             }
-            pTimeInfo.EndTime = (endTime == DateTime.MaxValue) ? Int64.MaxValue : endTime.ToFileTimeUtc();
+            pTimeInfo.EndTime = (endTime == DateTime.MaxValue) ? long .MaxValue : endTime.ToFileTimeUtc();
 
             pTimeInfo.SampleCount = 0;
 
@@ -1517,7 +1517,7 @@ namespace Microsoft.Powershell.Commands.GetCounter.PdhNative
             uint res = 0;
             nextSet = null;
 
-            Int64 batchTimeStampFT = 0;
+            long  batchTimeStampFT = 0;
 
             res = PdhCollectQueryDataWithTime(_hQuery, ref batchTimeStampFT);
             if (bSkipReading)

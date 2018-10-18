@@ -380,7 +380,7 @@ namespace Microsoft.PowerShell
         /// </summary>
 
         internal
-        Int64
+        long 
         SourceId;
 
         /// <summary>

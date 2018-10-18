@@ -299,7 +299,7 @@ namespace System.Diagnostics.Eventing
             [FieldOffset(0)]
             public UInt64 ULong;
             [FieldOffset(0)]
-            public Int64 Long;
+            public long  Long;
             [FieldOffset(0)]
             public Single Single;
             [FieldOffset(0)]

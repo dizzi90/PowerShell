@@ -110,7 +110,7 @@ namespace System.Management.Automation.Host
         int
         GetHashCode()
         {
-            // idea: consider X the high-order part of a 64-bit in, and Y the lower order half.  Then use the int64.GetHashCode.
+            // idea: consider X the high-order part of a 64-bit in, and Y the lower order half.  Then use the long .GetHashCode.
 
             UInt64 i64 = 0;
 
@@ -296,14 +296,14 @@ namespace System.Management.Automation.Host
         /// Hash code for this instance.
         /// <!--
         /// consider Width the high-order part of a 64-bit in, and
-        /// Height the lower order half.  Then use the int64.GetHashCode.-->
+        /// Height the lower order half.  Then use the long .GetHashCode.-->
         /// </returns>
 
         public override
         int
         GetHashCode()
         {
-            // idea: consider Width the high-order part of a 64-bit in, and Height the lower order half.  Then use the int64.GetHashCode.
+            // idea: consider Width the high-order part of a 64-bit in, and Height the lower order half.  Then use the long .GetHashCode.
 
             UInt64 i64 = 0;
 
@@ -863,7 +863,7 @@ namespace System.Management.Automation.Host
         /// <returns>
         /// Hash code for this instance.
         /// <!-- consider (Top XOR Bottom) the high-order part of a 64-bit int,
-        ///                (Left XOR Right) the lower order half.  Then use the int64.GetHashCode.-->
+        ///                (Left XOR Right) the lower order half.  Then use the long .GetHashCode.-->
         /// </returns>
         /// <exception/>
 
@@ -872,7 +872,7 @@ namespace System.Management.Automation.Host
         GetHashCode()
         {
             // idea: consider (Top XOR Bottom) the high-order part of a 64-bit int,
-            //                (Left XOR Right) the lower order half.  Then use the int64.GetHashCode.
+            //                (Left XOR Right) the lower order half.  Then use the long .GetHashCode.
 
             UInt64 i64 = 0;
 

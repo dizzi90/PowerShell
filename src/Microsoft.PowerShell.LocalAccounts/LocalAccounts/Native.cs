@@ -172,7 +172,7 @@ namespace System.Management.Automation.SecurityAccountsManager.Native
     struct LARGE_INTEGER
     {
         [FieldOffset(0)]
-        public Int64 QuadPart;
+        public long  QuadPart;
         [FieldOffset(0)]
         public UInt32 LowPart;
         [FieldOffset(4)]

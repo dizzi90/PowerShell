@@ -403,7 +403,7 @@ namespace Microsoft.PowerShell
             IndexWhereFound = -1;
 
             private int _idToFind = -1;
-            private Int64 _sourceIdToFind;
+            private long  _sourceIdToFind;
         }
 
         /// <summary>

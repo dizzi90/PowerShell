@@ -220,7 +220,7 @@ namespace Microsoft.PowerShell.Commands
 
         private bool IsInt64(object o)
         {
-            if (o == null || o is Int64)
+            if (o == null || o is long )
             {
                 return true;
             }
@@ -321,12 +321,12 @@ namespace Microsoft.PowerShell.Commands
         }
 
         /// <summary>
-        /// Get a random Int64 type number.
+        /// Get a random long  type number.
         /// </summary>
         /// <param name="min"></param>
         /// <param name="max"></param>
         /// <returns></returns>
-        private Int64 GetRandomInt64(Int64 min, Int64 max)
+        private long  GetRandomInt64(Int64 min, long  max)
         {
             // Randomly generate eight bytes and convert the byte array to UInt64
             var buffer = new byte[sizeof(UInt64)];
@@ -341,7 +341,7 @@ namespace Microsoft.PowerShell.Commands
                 return min + randomDiff;
             }
 
-            // The difference of two Int64 numbers would not exceed UInt64.MaxValue, so it can be represented by a UInt64 number.
+            // The difference of two long  numbers would not exceed UInt64.MaxValue, so it can be represented by a UInt64 number.
             UInt64 uint64Diff = (UInt64)bigIntegerDiff;
 
             // Calculate the number of bits to represent the diff in type UInt64
@@ -399,15 +399,15 @@ namespace Microsoft.PowerShell.Commands
                 }
                 else if ((IsInt64(maxOperand) || IsInt(maxOperand)) && (IsInt64(minOperand) || IsInt(minOperand)))
                 {
-                    Int64 min = minOperand != null ? ((minOperand is Int64) ? (Int64)minOperand : (int)minOperand) : 0;
-                    Int64 max = maxOperand != null ? ((maxOperand is Int64) ? (Int64)maxOperand : (int)maxOperand) : Int64.MaxValue;
+                    long  min = minOperand != null ? ((minOperand is long ) ? (Int64)minOperand : (int)minOperand) : 0;
+                    long  max = maxOperand != null ? ((maxOperand is long ) ? (Int64)maxOperand : (int)maxOperand) : long .MaxValue;
 
                     if (min >= max)
                     {
                         this.ThrowMinGreaterThanOrEqualMax(min, max);
                     }
 
-                    Int64 randomNumber = this.GetRandomInt64(min, max);
+                    long  randomNumber = this.GetRandomInt64(min, max);
                     Debug.Assert(min <= randomNumber, "lower bound <= random number");
                     Debug.Assert(randomNumber < max, "random number < upper bound");
 

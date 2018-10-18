@@ -72,7 +72,7 @@ namespace System.Management.Automation.Interpreter
         {
             public override int Run(InterpretedFrame frame)
             {
-                Int64 right = (Int64)frame.Pop();
+                long  right = (Int64)frame.Pop();
                 frame.Push(((Int64)frame.Pop()) < right);
                 return +1;
             }

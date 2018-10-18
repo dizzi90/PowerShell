@@ -146,7 +146,7 @@ namespace System.Management.Automation.Interpreter {
                 }
                 case TypeCode.Int16: return FastCreate<T0, Int16>(target, pi);
                 case TypeCode.Int32: return FastCreate<T0, Int32>(target, pi);
-                case TypeCode.Int64: return FastCreate<T0, Int64>(target, pi);
+                case TypeCode.Int64: return FastCreate<T0, long >(target, pi);
                 case TypeCode.Boolean: return FastCreate<T0, Boolean>(target, pi);
                 case TypeCode.Char: return FastCreate<T0, Char>(target, pi);
                 case TypeCode.Byte: return FastCreate<T0, Byte>(target, pi);
@@ -182,7 +182,7 @@ namespace System.Management.Automation.Interpreter {
                 }
                 case TypeCode.Int16: return new FuncCallInstruction<T0, T1, Int16>(target);
                 case TypeCode.Int32: return new FuncCallInstruction<T0, T1, Int32>(target);
-                case TypeCode.Int64: return new FuncCallInstruction<T0, T1, Int64>(target);
+                case TypeCode.Int64: return new FuncCallInstruction<T0, T1, long >(target);
                 case TypeCode.Boolean: return new FuncCallInstruction<T0, T1, Boolean>(target);
                 case TypeCode.Char: return new FuncCallInstruction<T0, T1, Char>(target);
                 case TypeCode.Byte: return new FuncCallInstruction<T0, T1, Byte>(target);
